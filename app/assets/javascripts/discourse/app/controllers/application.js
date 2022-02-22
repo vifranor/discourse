@@ -7,6 +7,12 @@ export default Controller.extend({
   showTop: true,
   showFooter: false,
   router: service(),
+  queryParams: ["glimmer"],
+
+  @discourseComputed("glimmer")
+  useGlimmer(glimmer) {
+    return glimmer === "1";
+  },
 
   @discourseComputed
   canSignUp() {
