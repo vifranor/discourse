@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require 'version'
 
-describe Discourse::VERSION do
+describe Discourse::Version do
   context "has_needed_version?" do
     it "works for major comparisons" do
       expect(Discourse.has_needed_version?('1.0.0', '1.0.0')).to eq(true)
